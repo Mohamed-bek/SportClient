@@ -1,0 +1,487 @@
+.LogSing {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.LogSing .container .btn {
+  position: absolute;
+  top: -1%;
+  right: -1%;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: var(--first-color);
+  z-index: 1000000;
+}
+.LogSing .container .btn .icon {
+  position: absolute;
+  bottom: 17%;
+  left: 22%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+.LogSing > .container {
+  width: min-content;
+}
+.LogSing .container {
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.Log,
+.SignIn {
+  width: 1000px;
+  display: none;
+  height: 80vh;
+  display: flex;
+  direction: rtl;
+}
+.LogImg,
+.SignImg {
+  width: 50%;
+  height: 80vh;
+  background-color: var(--black-color);
+  transition: var(--tran-time);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LogImg.active {
+  transform: translateY(100%);
+}
+.SignImg.active {
+  transform: translateY(-100%);
+}
+.Log img,
+.SignImg img {
+  width: 100%;
+}
+.LogForm,
+.SignForm {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--black-color);
+  transition: var(--tran-time);
+  z-index: 1000;
+}
+.SignForm {
+  transform: translateY(-200%);
+}
+.SignForm.active {
+  transform: translateY(-100%);
+}
+.LogForm.active {
+  transform: translateY(-100%);
+}
+
+.SignForm .LogNow,
+.LogForm .RegNow {
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 15px 0;
+  width: fit-content;
+  margin: 0 auto;
+}
+.LogForm .RegNow span,
+.SignForm .LogNow span {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--first-color);
+  position: relative;
+  z-index: 1000;
+}
+.LogCont {
+  width: 76%;
+}
+.LogCont form,
+.SignCon form {
+  width: 100%;
+  color: var(--black-color);
+  display: block;
+}
+.LogCont h1,
+.SignCon h1 {
+  font-size: 2rem;
+  padding: 20px 0;
+  width: 100%;
+  margin: 0 auto;
+  font-weight: bold;
+  color: var(--black-color);
+  text-align: center;
+}
+.LogCont p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 10px 0;
+  color: var(--black-color);
+}
+.LogCont input:focus,
+.SignCon input:focus {
+  outline: none;
+}
+.LogCont input[type="password"] {
+  position: relative;
+  margin-bottom: 0;
+}
+/* .LogCont .Pass span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3px 5px;
+    transform: translateY(100%);
+} */
+.SignCon .names {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: space-between;
+}
+.SignCon .names div input {
+  width: 85%;
+  margin-left: 15%;
+}
+.SignCon .names div {
+  margin-bottom: 0px;
+  min-width: 130px;
+}
+.SignCon .names .AfterInp::after {
+  margin-left: 10%;
+}
+.LogCont .AfterInp,
+.SignCon .AfterInp {
+  display: block;
+  margin: 25px 0;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--black-color);
+  position: relative;
+}
+.LogCont .AfterInp input,
+.SignCon .AfterInp input {
+  border: none;
+  width: 92%;
+  height: 100%;
+  z-index: 100;
+  position: relative;
+  background-color: transparent;
+  font-size: 0.9rem;
+  margin-right: 8%;
+  color: var(--black-color);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.LogCont .AfterInp::after,
+.SignCon .AfterInp::after {
+  content: attr(data-plac);
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  width: fit-content;
+  transition: var(--tran-time);
+  background-color: var(--white-color);
+  z-index: 1;
+  padding: 3px;
+}
+.LogCont .AfterInp.active::after,
+.SignCon .AfterInp.active::after {
+  top: 0;
+  transform: translateY(-55%);
+  z-index: 10000;
+}
+.LogForm .AfterInp .icon,
+.SignCon .AfterInp .icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  cursor: pointer;
+  z-index: 100000;
+}
+.AfterInp .see {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  cursor: pointer;
+  z-index: 100000;
+}
+.LogCont .Pass {
+  display: flex;
+  flex-direction: column;
+}
+.AfterInp .see.active {
+  display: none;
+}
+.SignCon .gender {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.SignCon .gender .GenImg {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.SignCon .gender .GenImg.active {
+  background-color: var(--first-color);
+}
+.SignCon .gender .GenImg .icon {
+  font-size: 1.7rem;
+  color: var(--black-color);
+  cursor: pointer;
+}
+.LogCont input[type="submit"],
+.SignCon form input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: var(--first-color);
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: var(--white-color);
+}
+.LogCont .under {
+  margin: 25px 0 30px;
+}
+.LogCont .under,
+.LogCont .Inpchek {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.LogCont .Inpchek input {
+  height: 18px;
+  width: 18px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.LogCont .Inpchek label {
+  cursor: pointer;
+}
+.LogCont .Frgt {
+  color: var(--first-color);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.AfterInp:has(select)::after {
+  width: 0;
+}
+.AfterInp select {
+  border: none;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: relative;
+  background-color: transparent;
+  font-size: 0.9rem;
+  padding-right: 15px;
+  margin-left: 8%;
+  color: var(--black-color);
+}
+.AfterInp select:focus {
+  outline: none;
+}
+
+.LogCont .Inpchek input[type="checkbox"]:checked {
+  accent-color: var(--first-color);
+}
+.err {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: -17px;
+  padding-left: 30px;
+  font-weight: 600;
+}
+@media (max-width: 1100px) {
+  .LogSing .container {
+    width: 85%;
+  }
+  .LogCont {
+    width: 94%;
+  }
+}
+@media (max-width: 970px) {
+  .LogSing .container {
+    width: 94%;
+  }
+  .LogCont .Inpchek label {
+    font-size: 0.85rem;
+  }
+  .LogCont .Inpchek input {
+    height: 16px;
+    width: 16px;
+    margin-left: 3px;
+  }
+  .LogCont .Frgt {
+    font-size: 0.85rem;
+  }
+  .LogForm .RegNow span {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 760px) {
+  .LogSing {
+    height: 92vh;
+    margin-top: 4vh;
+  }
+  .LogSing .container {
+    width: 60%;
+    height: 92vh;
+    overflow: hidden;
+  }
+  .LogCont {
+    width: 96%;
+  }
+  .Log,
+  .SignIn {
+    flex-wrap: wrap;
+    overflow: visible;
+    height: 92vh;
+  }
+  .LogImg,
+  .LogForm,
+  .SignForm {
+    width: 100%;
+    height: 52vh;
+    transform: translate(0, 0);
+  }
+  .LogImg {
+    height: 40vh;
+  }
+  .SignImg {
+    display: none;
+  }
+  .SignForm {
+    height: 100%;
+    width: 100%;
+  }
+  .Log img,
+  .SignImg img {
+    width: 90%;
+  }
+  .Log .LogForm .container,
+  .SignForm .SignCon {
+    width: 80%;
+  }
+  .LogCont h1,
+  .SignCon h1 {
+    font-size: 1.3rem;
+    padding: 10px 0 0;
+  }
+  .LogCont p {
+    font-size: 1rem;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .LogCont .AfterInp,
+  .SignCon .AfterInp {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .LogCont .AfterInp::after,
+  .SignCon .AfterInp::after {
+    font-size: 0.95rem;
+    margin-left: 5px;
+  }
+  .LogForm .AfterInp .icon,
+  .SignCon .AfterInp .icon {
+    font-size: 0.8rem;
+  }
+  .LogCont .AfterInp input,
+  .SignCon .AfterInp input {
+    padding-left: 8px;
+  }
+  .LogCont .under {
+    margin: 15px 0 15px;
+  }
+  .LogCont input[type="submit"],
+  .SignCon form input[type="submit"] {
+    margin: 10px auto 0;
+    padding: 8px;
+  }
+  .SignForm .LogNow,
+  .LogForm .RegNow {
+    text-align: center;
+  }
+  .LogForm .RegNow span,
+  .SignForm .LogNow span {
+    display: block;
+    margin-top: 5px;
+  }
+  .LogSing .container .btn .icon {
+    bottom: 16%;
+    left: 29%;
+  }
+  .SignCon .AfterInp {
+    margin: 17px auto;
+    width: 90%;
+  }
+  .SignCon .names {
+    gap: 0;
+  }
+  .SignForm {
+    min-width: 310px;
+    transition-delay: var(--tran-time);
+  }
+  .SignCon h1 {
+    padding: 10px 0 0;
+    text-align: center;
+  }
+  .Log .LogForm > .container {
+    width: 92%;
+  }
+  .LogForm .RegNow span {
+    display: inline;
+  }
+  .LogImg,
+  .LogForm {
+    transition-delay: var(--tran-time);
+  }
+  .LogForm.active {
+    transform: translateX(100%);
+  }
+  .LogImg.active {
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 576px) {
+  .LogSing .container {
+    width: 90%;
+  }
+  .Log img,
+  .SignImg img {
+    width: 100%;
+  }
+}

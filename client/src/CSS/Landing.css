@@ -1,0 +1,393 @@
+.Landing {
+  width: 100%;
+  position: relative;
+  height: calc(100vh - 100px);
+  display: flex;
+}
+/*----------------------- Start header page  ------------------*/
+.Header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  box-shadow: rgba(177, 177, 184, 0.2) 0px 7px 29px 0px;
+  border-radius: 50px;
+  background-color: var(--white-color);
+  z-index: 100000;
+  margin-bottom: 20px;
+  box-shadow: var(--Shadow-color);
+  position: sticky;
+  z-index: 100000000;
+  top: 20px;
+  direction: rtl;
+}
+.Header .Logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Header .Logo img {
+  width: 120px;
+  padding: 0;
+  background-color: var(--white-color);
+}
+.Header .Logo h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  position: relative;
+  color: var(--black-color);
+}
+.Header .Logo h1::after {
+  position: absolute;
+  font-size: 0.8rem;
+  content: "Gamer";
+  bottom: 0;
+  right: 0;
+  transform: translateY(65%);
+  color: var(--first-color);
+  text-transform: capitalize;
+  padding: 0;
+  font-weight: 700;
+}
+.Header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.Header ul li a {
+  padding: 15px 0;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.03rem;
+  color: var(--grey-color);
+  text-decoration: none;
+}
+.Header ul li a.active {
+  font-size: 1.03rem;
+  color: var(--black-color);
+  transform: scale(1.01);
+  font-weight: 600;
+  transition: var(--tran-time);
+}
+.Header ul .after {
+  position: absolute;
+  left: 10%;
+  width: 8px;
+  height: 8px;
+  background-color: var(--first-color);
+  z-index: -1;
+  transition: var(--tran-time);
+  border-radius: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+.Header .BtnLog {
+  padding: 13px;
+  background-color: var(--first-color);
+  cursor: pointer;
+  font-size: 1.03rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 22px;
+}
+.Header .Type.active {
+  transform: scale(1) translate(0%, 100%);
+}
+.Header .Type {
+  z-index: -100;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--first-color);
+  padding: 5px 10px;
+  border-radius: 8px;
+  transform: scale(0) translate(0%, 100%);
+  transition: var(--tran-time);
+}
+.Header .Type > div {
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.517);
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+.Header .Type > div a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.517);
+}
+.Header .Type > div .icon,
+.Header .Type > div a {
+  transition: var(--tran-time);
+}
+.Header .Type > div:hover .icon,
+.Header .Type > div:hover a {
+  color: white;
+}
+.BurgerIcon {
+  display: none;
+}
+.Header .BtnLog a {
+  color: white;
+  text-decoration: none;
+}
+.Header .profile-btn {
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.Header .profile-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1100px) {
+}
+@media (max-width: 970px) {
+  .Header {
+    padding: 5px 15px;
+  }
+  .Header .Logo img {
+    width: 45px;
+  }
+  .Header .Logo h1 {
+    font-size: 1.3rem;
+  }
+  .Header ul li a {
+    font-size: 0.95rem;
+    width: 70px;
+  }
+  .Header ul li a.active {
+    font-size: 0.98rem;
+  }
+  .Header ul li:last-child a {
+    width: 98px;
+  }
+  .Header .BtnLog {
+    font-size: 0.95rem;
+    padding: 10px 13px;
+  }
+}
+@media (max-width: 760px) {
+  @keyframes LtrSpacer {
+    0% {
+      letter-spacing: 3px;
+    }
+    10% {
+      color: var(--first-color);
+    }
+    50% {
+      letter-spacing: 30px;
+    }
+    90% {
+      color: var(--first-color);
+    }
+    100% {
+      letter-spacing: 3px;
+      color: var(--grey-color);
+    }
+  }
+  .Header ul .after {
+    display: none;
+  }
+  .Header ul {
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--white-color);
+    bottom: 0;
+    left: 10%;
+    padding: 10px 20px;
+    width: 80%;
+    transform: scale(0) translate(0%, 100%);
+    transition: var(--tran-time);
+  }
+  .Header ul.active {
+    transform: scale(1) translate(0%, 100%);
+  }
+  .Header ul li a {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 1.13rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+  .Header ul li a.active {
+    font-size: 1.22rem;
+    animation: LtrSpacer calc(var(--tran-time) * 2);
+  }
+  .BurgerIcon {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .BurgerIcon span {
+    height: 2px;
+    background-color: var(--black-color);
+  }
+  .BurgerIcon span:first-child {
+    width: 75%;
+  }
+  .BurgerIcon span:nth-child(2) {
+    width: 100%;
+  }
+  .BurgerIcon span:last-child {
+    width: 60%;
+  }
+}
+@media (max-width: 576px) {
+}
+.logout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: 0.4s;
+  background-color: var(--first-color);
+  color: white;
+  transform: translate(-16%, 60%) scale(0);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.logout.active {
+  transform: translate(-16%, 60%) scale(1);
+}
+.logout svg {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+/* }---------- End Header page  ----------- */
+/*------------- start landing page  -----------------*/
+.LanPage {
+  width: 100%;
+  padding: 120px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: -100px;
+}
+.LanPage .Info {
+  width: 40%;
+  padding-left: 20px;
+  color: var(--black-color);
+  text-align: right;
+}
+.LanPage .Info h1 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  padding: 0 0 30px;
+  text-transform: lowercase;
+}
+.LanPage .Info h1::first-letter {
+  text-transform: uppercase;
+}
+
+.LanPage .Info h1 span:first-child {
+  color: var(--first-color);
+}
+.LanPage .Info p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.45px;
+  margin-bottom: 30px;
+}
+.LanPage .Info button {
+  padding: 15px 25px;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border-radius: 50px 50px 50px 0;
+  cursor: pointer;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: block;
+  margin: 0 30px 0 auto;
+  color: white;
+}
+.LanPage .Slider {
+  width: 50%;
+  overflow: hidden;
+  background-color: transparent;
+  order: -1;
+}
+.LanPage .Slider img {
+  width: 100%;
+  transition: transform 1s, order 0s 2s;
+}
+@keyframes imgANim {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.LanPage .Slider .ContSlider {
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+@media (max-width: 576px) {
+}
+@media (max-width: 760px) {
+  .LanPage {
+    flex-wrap: wrap;
+  }
+  .LanPage .Info {
+    width: 100%;
+  }
+  .LanPage .Slider {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .LanPage .Info h1 {
+    display: flex;
+    gap: 10px;
+    font-size: 2.1rem;
+    justify-content: center;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  .LanPage .Info p {
+    text-align: center;
+  }
+  .LanPage .Info button {
+    margin: 0 auto 20px;
+  }
+}
+@media (max-width: 960px) {
+}
+@media (min-width: 961px) {
+}
+/* End LAnding page  */

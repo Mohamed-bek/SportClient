@@ -1,0 +1,162 @@
+.Not-found {
+    width: 100%;
+    height: calc(100vh - 105px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px ;
+}
+/* .svg{
+    position: absolute;
+    background-color: var(--test-shdow);
+    left: -100px ;
+    width: 100vh;
+    scale: 2;
+    rotate: 90deg;
+} */
+.recto {
+    height: 60vh;
+    width: 80px;
+    left: 0;
+    bottom: 0;
+}
+.circle1{
+    width: 350px;
+    height: 50vh;
+    border-radius: 50%;
+    left: -160px;
+    bottom: 18vh;
+    transform: rotate(-34deg);
+}
+.circle2{
+    bottom: -107px;
+    width: 350px;
+    height: 300px;
+    border-radius: 50%;
+}
+.Not-found .Cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+.Not-found .Cont .info {
+    width: 40%;
+}
+.Not-found .Cont .img-cont {
+    width: 45%;
+}
+.Not-found .Cont .img-cont img {
+    width: 100%;
+}
+.Not-found .Cont .info h1 {
+    font-size: 5.5rem ;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--black-color);
+    position: relative;
+}
+.Not-found .Cont .info h1 span {
+    position: absolute;
+    width: 30px;
+    height: 3.5px;
+    background-color: var(--first-color);
+    top: 0;
+    left: -35px;
+    transform-origin: right center;
+}
+.Not-found .Cont .info h1 span:first-child{
+    top: 0px;
+    transform: rotate(55deg);
+}
+.Not-found .Cont .info h1 span:nth-child(2){
+    top: 7px;
+    transform: rotate(40deg);
+    left: -40px;
+}
+.Not-found .Cont .info h1 span:last-child{
+    top: 14px;
+    transform: rotate(25deg);
+    left: -45px;
+}
+.Not-found .Cont .info p {
+    font-size: 1.2rem ;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding: 0 30px 0 5px;
+    color: var(--black-color);
+}
+.Not-found .Cont .info button {
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--first-color);
+    border: none;
+    border-bottom-right-radius: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .Not-found .Cont .info h1{
+        font-size: 4rem;
+    }
+    .Not-found .Cont .img-cont {
+        width: 58%;
+    }
+    .Not-found{
+        padding: 20px 0;
+    }
+
+}
+@media (max-width: 970px) {
+    .Not-found .Cont .info h1{
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 760px) {
+    .Not-found  {
+        padding: 0;
+        height: calc(100vh - 80px);
+    }
+    .Not-found .Cont {
+        flex-wrap: wrap;
+    }
+    .Not-found .Cont .info{
+        width: 70%;
+    }
+    .Not-found .Cont .img-cont {
+        width: 60%;
+    }
+    .Not-found .Cont .info h1{
+        text-align: center;
+        margin: 20px auto 20px;
+    }
+    .Not-found .Cont .info p{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .Not-found .Cont .info button {
+        margin: 0 auto;
+        display: block;
+    }
+}
+@media (max-width: 576px) {
+    .Not-found .Cont .info{
+        width: 95%;
+    }
+    .Not-found .Cont .img-cont{
+        width: 85%;
+    }
+    .Not-found .Cont .info p {
+        padding: 0 20px;
+        font-size: 1.1rem;
+    }
+    .Not-found .Cont .info h1{
+        font-size: 3rem;
+    }
+}
+

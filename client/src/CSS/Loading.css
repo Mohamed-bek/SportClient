@@ -1,0 +1,81 @@
+.Loading {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.Loading h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 7.5rem;
+    text-transform: capitalize;
+    width: fit-content;
+    z-index: 1;
+    color: white;
+    mix-blend-mode: difference;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+.Loading .Rectongle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.Loading .Rectongle > div {
+    width: calc(100% / 10);
+    height: 100%;
+    transform: scaleY(0);
+    background-color: black;
+    animation: UpDown 3.3s linear forwards  ;
+}
+.Loading .Rectongle > div:nth-child(odd) {
+    transform-origin: top ;
+}
+.Loading .Rectongle > div:nth-child(even) {
+    transform-origin: bottom;
+}
+@keyframes UpDown {
+    0% {
+        transform: scaleY(0);
+    }
+    10%,90% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
+.Loading .Rectongle > div:nth-child(2){
+    animation-delay: 0.3s;
+}
+.Loading .Rectongle > div:nth-child(3){
+    animation-delay: 0.6s;
+}
+.Loading .Rectongle > div:nth-child(4){
+    animation-delay: 0.9s;
+}
+.Loading .Rectongle > div:nth-child(5){
+    animation-delay: 1.2s;
+}
+.Loading .Rectongle > div:nth-child(6){
+    animation-delay: 1.5s;
+}
+.Loading .Rectongle > div:nth-child(7){
+    animation-delay: 1.8s;
+}
+.Loading .Rectongle > div:nth-child(8){
+    animation-delay: 2.1s;
+}
+.Loading .Rectongle > div:nth-child(9){
+    animation-delay: 2.4s;
+}
+.Loading .Rectongle > div:nth-child(10){
+    animation-delay: 2.7s;
+}
+

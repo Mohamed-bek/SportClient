@@ -1,0 +1,489 @@
+/*--------------------- Start Services  --------------------*/
+.Services,
+.Contact,
+.About {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+}
+.Services > .cont,
+.About > .cont,
+.Contact .cont > h1,
+.About h1,
+.Services h1 {
+  color: var(--black-color);
+  width: fit-content;
+  font-size: 3.3rem;
+  margin: 10px auto 30px;
+  letter-spacing: 2px;
+}
+
+.Contact h1 span,
+.About h1 span,
+.Services h1 span {
+  color: var(--first-color);
+}
+.Services a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+.Services h2 {
+  width: fit-content;
+  margin: 0 auto 40px;
+  color: var(--black-color);
+  text-transform: lowercase;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+}
+.Services .ServCont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 0;
+}
+.Services .ServCont > div {
+  padding: 10px 15px;
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--Shadow-color);
+  transition: var(--tran-time);
+  background-color: var(--white-color);
+  position: relative;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+.Services .ServCont > div::after,
+.Services .ServCont > div::before {
+  position: absolute;
+  content: "";
+  background-color: var(--first-color);
+  width: 0%;
+  height: 5px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  top: 0px;
+  transition: var(--tran-time);
+}
+.Services .ServCont > div::before {
+  background-color: var(--grey-color);
+  width: 100%;
+}
+.Services .ServCont > div:hover {
+  transform: scale(1.05);
+}
+.Services .ServCont > div:hover:after {
+  width: 100%;
+}
+.Services .ServCont img {
+  width: 100px;
+  margin: 20px;
+}
+.Services .ServCont h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 0 10px 10px;
+  color: var(--black-color);
+}
+.Services .ServCont p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 0 0 10px;
+  color: var(--black-color);
+}
+.Services .ServCont .icon {
+  padding: 10px;
+  font-weight: 300;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: var(--black-color);
+  border: 0.5px solid var(--black-color);
+  align-self: flex-end;
+  cursor: pointer;
+  transition: var(--tran-time);
+}
+.Services .ServCont .icon:hover {
+  border: none;
+  background-color: var(--first-color);
+  color: var(--white-color);
+}
+@media (max-width: 760px) {
+  .Services h1 {
+    font-size: 2.7rem;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+  }
+  .Services h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .Services .ServCont {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .Services .ServCont > div {
+    width: calc(50% - 30px);
+  }
+}
+@media (max-width: 960px) {
+}
+@media (min-width: 961px) {
+}
+@media (max-width: 576px) {
+  .Services .ServCont > div {
+    width: 275px;
+  }
+  .Services h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+
+/*----------------------- End Services  ------------------*/
+/*----------------------- Start About ---------------------*/
+/* .About {
+    width: 100%;
+    padding: 120px 0 0;
+} */
+.About h1 {
+  margin-bottom: 0px;
+}
+.About .AboutCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+.About .Info {
+  width: 45%;
+}
+.About .Info p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  color: var(--black-color);
+}
+.About .Info button {
+  padding: 15px 25px;
+  background-color: var(--first-color);
+  color: white;
+  border-radius: 50px 50px 50px 0;
+  cursor: pointer;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: block;
+  margin: 30px 0;
+}
+.About .imgCont {
+  width: 45%;
+}
+.About .imgCont img {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+}
+@media (max-width: 760px) {
+}
+@media (max-width: 960px) {
+  .About h1 {
+    font-size: 2.5rem;
+  }
+  .About .AboutCont {
+    flex-wrap: wrap;
+  }
+  .About .Info {
+    width: 100%;
+  }
+  .About .Info p {
+    padding: 20px 10px 10px;
+    text-align: center;
+  }
+  .About .Info button {
+    margin: 20px auto;
+  }
+  .About .imgCont {
+    width: 100%;
+  }
+}
+
+/*---------------------------- End ABout  -----------------------------*/
+/*---------------------------- start Contact  -----------------------------*/
+/* .Contact  {
+    width: 100%;
+    padding: 120px 20px;
+} */
+.Contact .cont {
+  width: 100%;
+}
+.Contact .Cntnr {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.Contact .Cntnr .boxForm {
+  width: 55%;
+  padding: 10px 15px;
+}
+.Contact .Cntnr .boxForm .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Contact .Cntnr .boxForm .head h1 {
+  font-size: 1.9rem;
+  padding-left: 20px;
+  color: var(--black-color);
+}
+.Contact .Cntnr .boxForm .head h1 span {
+  color: var(--first-color);
+}
+.Contact .Cntnr .boxForm .head img {
+  width: 60px;
+  margin-right: 4px;
+}
+.Contact .Cntnr .boxForm form {
+  width: 100%;
+}
+.Contact .Cntnr .boxForm form .FormDiv {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+}
+.Contact .Cntnr .boxForm form .FormDiv .inpCont {
+  width: calc(50%);
+  position: relative;
+}
+.Contact .Cntnr .boxForm form .FormDiv .inpCont label {
+  display: block;
+  color: var(--grey-color);
+  transition: var(--tran-time);
+}
+.Contact .Cntnr .boxForm form .FormDiv .inpCont input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--grey-color);
+  padding: 6px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--black-color);
+}
+.Contact .Cntnr .boxForm form .FormDiv .inpCont::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 1.5px;
+  background-color: var(--black-color);
+  transform: translateX(-50%);
+  transition: var(--tran-time);
+}
+.Contact .Cntnr .boxForm form .FormDiv .inpCont:has(input:focus)::after {
+  width: 100%;
+}
+.Contact .Cntnr .boxForm form .FormDiv .inpCont:has(input:focus) label {
+  color: var(--black-color);
+}
+.Contact .Cntnr .boxForm form .FormDiv .inpCont input:focus {
+  outline: none;
+}
+.Contact .Cntnr .boxForm form .FormDiv:last-child {
+  gap: 0;
+  position: relative;
+}
+.Contact .Cntnr .boxForm form .FormDiv:last-child button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--first-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transform: translate(7%, 23%);
+}
+.Contact .Cntnr .boxForm form .FormDiv:last-child button img {
+  width: 40px;
+  transform: translateX(-1px);
+}
+.Contact .Cntnr .boxForm form .FormDiv:last-child .inpCont {
+  width: 100%;
+}
+.Contact .Cntnr .boxInfo {
+  width: 40%;
+  height: 100%;
+  background-color: var(--first-color);
+  padding: 20px 30px;
+  border-radius: 13px;
+}
+.Contact .Cntnr .boxInfo h1 {
+  width: fit-content;
+  margin: 0px auto 20px;
+  color: white;
+  font-size: 1.7rem;
+  position: relative;
+}
+.Contact .Cntnr .boxInfo h1::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2.5px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-1.5px);
+}
+.Contact .Cntnr .boxInfo .DivInfo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px 25px;
+  overflow-x: auto;
+}
+.Contact .Cntnr .boxInfo .DivInfo a {
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+}
+.Contact .Cntnr .boxInfo .DivInfo img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+@media (max-width: 1100px) {
+  .Contact .Cntnr .boxInfo {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 970px) {
+  .Contact .Cntnr .boxInfo {
+    width: 45%;
+  }
+  .Contact .Cntnr .boxInfo h1 {
+    font-size: 1.53rem;
+  }
+  .Contact .Cntnr .boxInfo .DivInfo a {
+    font-size: 1rem;
+  }
+  .Contact .Cntnr .boxInfo img {
+    width: 25px;
+  }
+}
+@media (max-width: 760px) {
+  .Contact .Cntnr {
+    flex-wrap: wrap;
+  }
+  .Contact .Cntnr .boxInfo {
+    width: 80%;
+  }
+  .Contact .Cntnr .boxForm {
+    width: 100%;
+  }
+  .Contact .Cntnr .boxInfo .DivInfo {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .Contact .Cntnr .boxInfo h1 {
+    font-size: 1.7rem;
+  }
+  .Contact .Cntnr .boxInfo .DivInfo a {
+    font-size: 1.2rem;
+  }
+  .Contact .Cntnr .boxInfo img {
+    width: 35px;
+  }
+  .Contact .Cntnr .boxForm .head h1 {
+    font-size: 1.9rem;
+    padding: 0px 0;
+  }
+  .Contact .Cntnr .boxForm .head img {
+    width: 54px;
+  }
+  .Contact .cont > h1 {
+    font-size: 2.5rem;
+    margin: 30px auto 20px;
+  }
+}
+@media (max-width: 576px) {
+  .Contact .Cntnr .boxInfo h1 {
+    font-size: 1.35rem;
+  }
+  .Contact .Cntnr .boxInfo .DivInfo a {
+    font-size: 1rem;
+  }
+  .Contact .Cntnr .boxInfo img {
+    width: 30px;
+  }
+  .Contact .Cntnr .boxForm .head h1 {
+    font-size: 1.5rem;
+  }
+  .Contact .Cntnr .boxForm .head img {
+    width: 40px;
+  }
+}
+
+.ServiceList {
+  width: 100%;
+  direction: rtl;
+  list-style: none;
+  font-size: 1.7rem;
+}
+
+.ServiceList li {
+  padding: 10px 0;
+  color: var(--black-color);
+  position: relative;
+  padding-right: 20px;
+}
+.ServiceList li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+}
+.ServiceList li span {
+  color: var(--first-color);
+  padding-left: 20px;
+  margin-left: 17px;
+  position: relative;
+}
+.ServiceList li span::after {
+  content: ":";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--first-color);
+}
+
+.Contact h1 {
+  padding: 30px 0;
+}
+
+/*---------------------------- end COntact  -----------------------------*/

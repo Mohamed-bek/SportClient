@@ -1,0 +1,770 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  font-size: 17px;
+  text-transform: capitalize;
+  --first-color: #607d8b;
+  --tran-time: 0.4s;
+  --white-color: #eee;
+  --black-color: #121212;
+  --grey-color: rgba(0, 0, 0, 0.517);
+  --borderGrey-color: rgb(0 0 0 / 21%);
+  /* --Shadow-color : 0px 6px 12px 0px rgba(0, 0, 0, 0.12); */
+  --Shadow-color: #607d8b44 0px 7px 29px 0px;
+  --btn-color: linear-gradient(to bottom, #eaeaea, #f9f0f9);
+  --btn-shadow: 0 8px 20px rgba(8, 9, 9, 8.1),
+    inset 0 4px 4px rgba(255, 255, 255, 1),
+    inset 0 -4px 4px rgba(255, 255, 255, 1);
+  --test-shdow: #607d8b67;
+}
+:root.active {
+  --white-color: #121212;
+  --black-color: #eee;
+  --grey-color: rgb(162, 160, 160);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white-color);
+  width: 100%;
+  min-height: 100vh;
+}
+.App {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+.Container {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.delay-0 {
+  animation-delay: 0.05s;
+}
+.delay-1 {
+  animation-delay: 0.15s;
+}
+.delay-2 {
+  animation-delay: 0.35s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+.circles {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: var(--test-shdow);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 961px) {
+  .Container {
+    width: 90%;
+  }
+}
+@media (max-width: 960px) {
+  .Container {
+    width: 94%;
+  }
+}
+@media (max-width: 760px) {
+  body {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  .Container {
+    width: 96%;
+  }
+  .circles li:nth-child(6) {
+    left: 45%;
+    width: 80px;
+    height: 80px;
+  }
+  .circles li:nth-child(7) {
+    right: 15%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 7s;
+  }
+  .circles li:nth-child(10) {
+    left: 0;
+    right: 5%;
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 576px) {
+  .Container {
+    width: 100%;
+  }
+}
+
+.checkmark-icon {
+  color: var(--first-color);
+  font-size: 30px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.Programe {
+  width: 100%;
+  border-radius: 30px;
+  margin: 50px auto;
+  background-color: var(--white-color);
+  height: calc(100vh - 190px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(177, 177, 184, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--Shadow-color);
+  position: relative;
+}
+.Programe .ref {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100;
+  max-width: 700px;
+  height: 60%;
+  max-height: 500px;
+  z-index: 9999999999;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--first-color);
+  color: white;
+  scale: 0;
+  transition: 0.4s;
+}
+.Programe .ref h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+.Programe .ref button {
+  width: 170px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  font-size: 1.6rem;
+  border-radius: 16px;
+}
+.Programe > div {
+  width: 100%;
+  max-width: 500px;
+  direction: rtl;
+}
+.Programe .pr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.Programe .AfterInp {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  margin: 7.5px 0 !important;
+}
+.Programe .pr .AfterInp {
+  width: calc(50% - 10px);
+}
+
+.Programe .select {
+  margin-left: 10px;
+  scale: 1.35;
+  cursor: pointer;
+}
+.Programe select {
+  padding-right: 15px;
+}
+.inputSelect {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 3px 5px;
+}
+
+.h2 {
+  padding: 5px 0 10px;
+  font-size: 2rem;
+}
+.inputSelect label {
+  font-size: 1.15rem;
+}
+.subm {
+  width: 100%;
+  max-width: 240px;
+}
+
+.Programe h1 {
+  text-align: center;
+}
+
+.ProgrameRequest {
+  width: 100%;
+  border-radius: 30px;
+  margin: 50px auto;
+  background-color: var(--white-color);
+  height: calc(100vh - 190px);
+  box-shadow: rgba(177, 177, 184, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--Shadow-color);
+  position: relative;
+  padding: 20px;
+  direction: rtl;
+}
+
+.ProgrameRequest .Info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--black-color);
+  justify-content: space-evenly;
+  border-bottom: 1px solid var(--black-color);
+  padding: 15px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.ProgrameRequest .Info > div {
+  width: calc(55% / 4);
+}
+.ProgrameRequest .Info > div:first-child {
+  width: 40%;
+}
+.ProgrameRequest .Info > div:nth-child(4),
+.ProgrameRequest .Info > div:nth-child(5),
+.ProgrameRequest .Info > div:nth-child(3) {
+  text-align: center;
+}
+@media (max-width: 670px) {
+  .hide {
+    display: none;
+  }
+}
+
+.ProgrameRequest .popUp {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200000000;
+  background-color: var(--white-color);
+  box-shadow: rgba(177, 177, 184, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--Shadow-color);
+  scale: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  color: var(--black-color);
+}
+.ProgrameRequest .popUp .flx {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0;
+}
+.ProgrameRequest .popUp .flx span:last-child {
+  font-size: 1.5rem;
+}
+.ProgrameRequest .popUp .flx span:first-child {
+  font-size: 1.2rem;
+  color: var(--grey-color);
+}
+.ProgrameRequest .popUp .contInfo {
+  width: 90%;
+  max-width: 800px;
+}
+.ProgrameRequest .popUp .flx > div {
+  width: 40%;
+}
+.popUp h2 {
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+.popUp ul {
+  padding-right: 30px;
+}
+.popUp li {
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+.popUp .flxButton {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  align-items: center;
+  margin-top: 20px;
+}
+.popUp .flxButton button {
+  width: fit-content;
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 10px 30px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.popUp .flxButton button:first-child {
+  background-color: var(--first-color);
+}
+
+.popUp .icon {
+  position: absolute;
+  color: var(--white-color);
+  font-size: 1.7rem;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-color);
+  top: -7px;
+  right: -7px;
+  cursor: pointer;
+}
+.ProgrameRequest .content {
+  height: calc(100% - 54px);
+  overflow: auto;
+}
+.delete {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999999;
+  background-color: var(--white-color);
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  scale: 0;
+  transition: 0.3s;
+}
+.delete h1 {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.moon {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.moon .mn {
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: var(--black-color);
+}
+.MyPrograme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MyPrograme input {
+  display: block;
+  width: 250px;
+  padding: 13px 15px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 1px solid var(--black-color);
+  color: var(--black-color);
+  border-radius: 10px;
+  font-size: 1.05rem;
+}
+.MyPrograme input::placeholder {
+  color: var(--black-color);
+  font-size: 1.05rem;
+}
+.MyPrograme input:focus {
+  outline: none;
+}
+.addExercice {
+  display: flex;
+  color: var(--black-color);
+  border-bottom: 1px solid var(--black-color);
+}
+.addExercice:first-child {
+  padding: 10px 0;
+}
+.addExercice > div {
+  width: 25%;
+  padding-right: 3%;
+}
+.addExercice > input {
+  width: 25%;
+  background-color: transparent;
+  border: none;
+  padding: 15px 3%;
+  color: var(--black-color);
+  border-left: 1px solid var(--black-color);
+}
+.addExercice > input:first-child {
+  border-right: 1px solid var(--black-color);
+}
+.addExercice > input:focus {
+  outline: none;
+}
+.addExercice > input::placeholder {
+  color: var(--grey-color);
+  font-size: 1rem;
+}
+.filePdf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  color: var(--black-color);
+  font-size: 1.1rem;
+  gap: 10%;
+}
+.filePdf input {
+  display: none;
+}
+.filePdf button {
+  padding: 8px 20px;
+  background-color: var(--first-color);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.iconAdd {
+  color: white;
+  margin-right: 10px;
+  margin-top: 20px;
+  background-color: var(--first-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.con {
+  height: 100%;
+}
+.ex {
+  max-height: calc(100% - 190px);
+  overflow: auto;
+}
+.con button {
+  display: block;
+  margin: 4px auto;
+  padding: 10px 20px;
+  background-color: var(--first-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.doctors {
+  width: 100%;
+  height: calc(50% - 55px);
+  margin-bottom: 10px;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+.doctorInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--white-color);
+}
+.New .doctorInfo > div {
+  width: 20%;
+}
+.Old .doctorInfo > div {
+  width: calc(90% / 5);
+  overflow-x: hidden;
+  text-align: center;
+}
+.Old .doctorInfo > div:nth-child(7),
+.Old .doctorInfo > div:nth-child(6) {
+  width: 5%;
+}
+.Old .doctorInfo > div:first-child,
+.Old .doctorInfo > div:nth-child(2) {
+  text-align: start;
+}
+.Old .doctorInfo > div button {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  font-size: 0.95rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.Old .doctorInfo > div:nth-child(6) button {
+  background-color: green;
+}
+
+.Old .doctorInfo > div:nth-child(7) button {
+  background-color: red;
+}
+.ProgrameRequest h1 {
+  color: var(--black-color);
+  font-size: 1.7rem;
+  width: fit-content;
+  margin: 0px auto 10px;
+}
+.clientInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--black-color);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--black-color);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.clientInfo > div {
+  width: 20%;
+}
+.clientInfo > div:last-child {
+  width: 40%;
+  font-size: 1.05rem;
+  text-align: center;
+}
+.down button,
+.MyPrograme button {
+  background-color: var(--first-color);
+  color: var(--black-color);
+  border: none;
+  display: block;
+  margin: 10px auto;
+  padding: 10px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  width: fit-content;
+}
+.down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.1rem;
+  color: var(--black-color);
+  margin: 20px 0;
+}
+.down button {
+  margin: 0;
+}
+.down a {
+  color: var(--black-color);
+}
+.MyExr {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+.MyExr > div:first-child {
+  width: calc(100% - 630px);
+  font-size: 1.4rem;
+  color: var(--black-color);
+  text-align: center;
+  font-size: 2.3rem;
+}
+.MyExr > div:first-child > div {
+  text-align: start;
+  padding: 10px 20px 10px 0;
+}
+.MyExr > div:first-child span {
+  color: var(--grey-color);
+  font-size: 2rem;
+}
+.MyExr .video {
+  width: 620px;
+  height: 370px;
+}
+.MyExr .video > iframe {
+  width: 100%;
+  height: 100%;
+}
+.videoInfo {
+  height: fit-content;
+}
+@media (max-width: 1101px) {
+  .MyExr .video {
+    width: 420px;
+    height: 270px;
+  }
+  .MyExr > div:first-child {
+    width: calc(100% - 430px);
+    font-size: 1.7rem;
+  }
+  .MyExr > div:first-child span {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 750px) {
+  .MyExr .video {
+    width: 320px;
+    height: 200px;
+  }
+  .MyExr > div:first-child {
+    width: calc(100% - 330px);
+    font-size: 1.4rem;
+  }
+  .MyExr > div:first-child span {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 607px) {
+  .MyExr .video {
+    width: 100%;
+    height: 220px;
+  }
+  .MyExr > div:first-child {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  .MyExr > div:first-child span {
+    font-size: 1.2rem;
+  }
+}
+.facebook > img {
+  width: 50px !important;
+}
+.facebook {
+  margin: 0 auto;
+}
